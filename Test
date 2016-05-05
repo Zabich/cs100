@@ -1,0 +1,31 @@
+int delay_time = 1000;
+struct color
+{
+  byte red;
+  byte green;
+  byte blue;
+};
+color red = {255, 0, 0};
+color orange = {255, 127, 0};
+color yellow = {255, 255, 0};
+color green = {0, 255, 0};
+color blue = {0, 0, 255};
+color indigo = {75, 0, 130};
+color violet = {148, 0, 211};
+color rainbow[] = {red, orange, yellow, green, blue, indigo, violet};
+byte which_color = 0;
+
+void setup()
+
+void loop()
+
+{
+ring.setPixelColor (0, ring.Color(rainbow[which_color].red * intensity,
+                                  rainbow[which_color].green * intensity,
+                                  rainbow[which_color].blue * intensity));
+ring.show();
+delay(delay_time);
+ring.setPixelColor(0, ring.Color(0, 0, 0));
+ring.show();
+delay(delay_time);
+}
